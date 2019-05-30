@@ -1,0 +1,1 @@
+{"index.js":"var myList = [];\n\nmyList = [[\"Chocolate Bar\", 10], [\"Butter Cubes\", 2], [\"Candies\", 8], [\"SoftDrinks\", 5], [\"Apple\", 10], [\"Mangoes\", 15], [\"Jam\", 1], [\"Cookies\", 20], [\"Bath Bar\", 4], [\"Hair Shampoo\", 1]];"}
