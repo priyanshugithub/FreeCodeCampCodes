@@ -1,0 +1,1 @@
+{"index.js":"function steamrollArray(arr) {\n  let flat = [].concat(...arr);\n  return flat.some(Array.isArray) ? steamrollArray(flat) : flat;\n}\n\nsteamrollArray([1, [2], [3, [[4]]]]);"}

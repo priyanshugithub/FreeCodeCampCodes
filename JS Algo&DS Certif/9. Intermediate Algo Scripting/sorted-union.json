@@ -1,0 +1,1 @@
+{"index.js":"function uniteUnique() {\n  var concatArr = [];\n  var i = 0;\n  while (arguments[i]){\n    concatArr = concatArr.concat(arguments[i]); i++;\n  }\n  var uniqueArray = concatArr.filter(function(item, pos) {\n    return concatArr.indexOf(item) == pos;\n  });\n  return uniqueArray;\n}\n\nuniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);"}
