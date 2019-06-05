@@ -1,0 +1,1 @@
+This Holds all the projects for the Responsive Web Design Certification from FreeCodeCamp.
