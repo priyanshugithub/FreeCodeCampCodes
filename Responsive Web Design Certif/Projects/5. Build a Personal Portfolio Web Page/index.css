@@ -1,0 +1,20 @@
+#welcome-section {
+    min-height: 60vh;
+    padding-top: 40vh;}
+  
+  #navbar{
+      position: fixed;
+      top: 0px;
+      width: 100%;}
+  
+  #navbar:after {
+      content:"";
+      clear:both;
+      display:block;
+      }
+  
+  @media screen and (max-width: 600px) {
+      #navbar {
+          float: none;
+          width: 100%;
+      }
