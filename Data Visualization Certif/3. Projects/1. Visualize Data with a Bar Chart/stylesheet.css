@@ -5,3 +5,7 @@
     background-color: gray; 
     margin: 2px;
 }
+
+svg {
+    background-color: pink;
+}
