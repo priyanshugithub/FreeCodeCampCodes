@@ -1,9 +1,9 @@
 .bar {
     width: 25px;
-    height: 100px;
+    height: 10px;
     display: inline-block;
     background-color: gray; 
-    margin: 1px;
+    margin: 2px;
 }
 
 svg {
