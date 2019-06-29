@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import Particles from 'react-particles-js';
 import QuoteBoard from './QuoteBoard';
 import './App.css';
@@ -6,7 +6,7 @@ import './App.css';
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 50,
       density: {
         enable: true,
         value_area: 800
