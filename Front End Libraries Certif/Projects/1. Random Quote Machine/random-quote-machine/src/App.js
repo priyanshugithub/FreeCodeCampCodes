@@ -22,7 +22,7 @@ function App() {
           params={particlesOptions}
         />
       <header className="App-header">
-      <article class="center mw5 mw6-ns br3 hidden ba b--black-20 mv6">
+      <article class="center mw5 mw6-ns br3 hidden ba b--black-20 mv6 bg-animate hover-bg-lightest-blue">
   <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Quotes</h1>
   <div class="pa3 bt b--black-10">
   <QuoteBoard />
