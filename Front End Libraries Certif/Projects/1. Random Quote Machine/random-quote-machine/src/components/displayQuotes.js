@@ -32,12 +32,11 @@ class QuoteBoard extends React.Component{
             {randomQuote &&
               <Fragment>
                 <div>
-                <h4 className="i">{randomQuote.quote}</h4>
+                <h4>{randomQuote.quote}</h4>
                   - <span>{randomQuote && randomQuote.author}</span>
                 </div>
                 <div>
-                <br />
-                  <button onClick={this.getRandomQuote} className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple'>New quote</button>
+                  <button onClick={this.getRandomQuote}>New quote</button>
                 </div>
               </Fragment>}
           </div>
