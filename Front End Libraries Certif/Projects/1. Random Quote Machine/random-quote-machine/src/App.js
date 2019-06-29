@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import QuoteBoard from './QuoteBoard';
-import './App.css';
+// import './App.css';
 
 function App() {
   return (

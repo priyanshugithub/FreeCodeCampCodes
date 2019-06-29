@@ -1,25 +1,47 @@
 import React from 'react';
-import PostData from './data.json';
+import { Fragment } from 'react';
 
 class QuoteBoard extends React.Component{
-  render(){
-    return(<div>
-      <h1>'Random Quote Machine'</h1>
-      <article class="center mw5 mw6-ns hidden ba mv4">
-  <h1 class="f4 bg-near-black white mv0 pv2 ph3">Title of card</h1>
-  <div class="pa3 bt">
-    <p class="f6 f5-ns lh-copy measure mv0">
-    {PostData.map((postDetail) => { 
-      //var postDetail = quotes[Math.floor(Math.random()*quotes.length)];
-      return (<div><h1>{postDetail.quote} - {postDetail.author}</h1></div>)})}
-    </p>
-    <h6 class="fl">jsk</h6>
-    <a class="f6 link dim ba ph3 pv2 mb2 dib black fr" href="#0" onClick>Button Text</a>
-  </div>
-  <div></div>
-</article>
-    </div>)
+  state = {
+    quotes: [],
+    randomQuote: null
   }
-};
+
+  componentDidMount() {
+    fetch('https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json')
+      .then(rsp => rsp.json())
+      .then(quotes => this.setState(quotes))
+      .catch(e=> console.log(e)
+      )
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.state.quotes !== prevState.quotes && this.getRandomQuote()
+  }
+
+  getRandomQuote = () => {
+    this.setState({
+      randomQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
+    })
+  }
+
+  render() {
+    const { randomQuote } = this.state
+    return (
+            <div>
+            {randomQuote &&
+              <Fragment>
+                <div>
+                <h1>{randomQuote.quote}</h1>
+                  - <span>{randomQuote && randomQuote.author}</span>
+                </div>
+                <div>
+                  <button onClick={this.getRandomQuote}>New quote</button>
+                </div>
+              </Fragment>}
+          </div>
+    );
+  }
+}
 
 export default QuoteBoard;
